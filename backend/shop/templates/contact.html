@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block main %}
+<div class="contact-banner">
+  <h2>Əlaqə</h2>
+</div>
+<section class="container contact-section">
+    <div class="contact-header">
+      <h1>Bizimlə əlaqə saxla</h1>
+      <p class="contact-text-black">Bizimlə rahatlıqla əlaqəyə keçə bilərsiniz</p>
+      <p class="contact-text-gray">Bizimlə sosial media hesablarımız, poçt ünvanımız və çağrı mərkəzimiz üzərindən əlaqə saxlaya bilərsiniz.</p>
+    </div>
+    <div class="contact-form">
+      <form method="POST">
+          {% csrf_token %}
+        <div class="input-contact">
+          {{ form.name }}
+        </div>
+        <div class="input-contact">
+          {{ form.email }}
+        </div>
+        <div class="input-contact">
+          {{ form.subject }}
+        </div>
+        <div class="input-contact">
+          {{ form.text }}
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </section>
+  
+<div class="container">
+  <div class="contact-border"></div>
+</div>
+<section class="container contact-mobil">
+  <div class="contact">
+    <h4>Bizimlə Əlaqə</h4>
+    <p><i class="fa-solid fa-phone"></i><br> +994 99 888 09 87</p>
+    <p><i class="fa-solid fa-envelope"></i> <a href="mailto:ibis123memmedzade123@gmail.com">ibis123memmedzade123@gmail.com</a></p>
+  </div>
+  <div class="address">
+    <h4>Ünvan</h4>
+    <p><i class="fa-solid fa-location-dot"></i><br> Yeni Gunesli ☝️</p>
+  </div>
+  <div class="watsapp">
+    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+  </div>
+</section>
+<section class="contat-map">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d966.3403566484742!2d49.983990508448024!3d40.380737055781935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sru!2saz!4v1728692857703!5m2!1sru!2saz"
+    width="90%"
+    height="500"
+    style="border: 0"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+  ></iframe>
+</section>
+{% endblock main %}

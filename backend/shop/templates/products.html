@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block main %}
+  
+  
+
+    <div class="product-banner">
+    </div>
+    <section id="products-section" style="margin-top: -300px;">
+      <p class="text-center" style="color:blue; font-size:100px; margin-left:350px; ">Məhsullarımız</p>
+
+
+      <div class="products">
+        {% for ourproduct in ourproducts  %}
+        
+        <div class="product">
+          <img
+            src="{{ourproduct.image.url}}"
+            alt=""
+          />
+            
+        </div>
+        {% endfor %}
+        
+      </div>
+    </section>
+
+{% endblock main %}
+    
+    
